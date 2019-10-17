@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B4B694F-AA3D-43B1-9D58-3DD73F15C96D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BungaHotel</RootNamespace>
+    <AssemblyName>BungaHotel</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addnewguest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addnewguest.Designer.cs">
+      <DependentUpon>Addnewguest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bookingroomform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bookingroomform.Designer.cs">
+      <DependentUpon>Bookingroomform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Changepasswordform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Changepasswordform.Designer.cs">
+      <DependentUpon>Changepasswordform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="comboitem.cs" />
+    <Compile Include="Inputpaymentform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inputpaymentform.Designer.cs">
+      <DependentUpon>Inputpaymentform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Koneksi.cs" />
+    <Compile Include="Loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loginform.Designer.cs">
+      <DependentUpon>Loginform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainform.Designer.cs">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Managebookingform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Managebookingform.Designer.cs">
+      <DependentUpon>Managebookingform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manageroomfacilityform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manageroomfacilityform.Designer.cs">
+      <DependentUpon>Manageroomfacilityform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manageroomform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manageroomform.Designer.cs">
+      <DependentUpon>Manageroomform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manageroomtypeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manageroomtypeform.Designer.cs">
+      <DependentUpon>Manageroomtypeform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Viewpaymentform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewpaymentform.Designer.cs">
+      <DependentUpon>Viewpaymentform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Addnewguest.resx">
+      <DependentUpon>Addnewguest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bookingroomform.resx">
+      <DependentUpon>Bookingroomform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Changepasswordform.resx">
+      <DependentUpon>Changepasswordform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inputpaymentform.resx">
+      <DependentUpon>Inputpaymentform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loginform.resx">
+      <DependentUpon>Loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainform.resx">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Managebookingform.resx">
+      <DependentUpon>Managebookingform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manageroomfacilityform.resx">
+      <DependentUpon>Manageroomfacilityform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manageroomform.resx">
+      <DependentUpon>Manageroomform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manageroomtypeform.resx">
+      <DependentUpon>Manageroomtypeform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Viewpaymentform.resx">
+      <DependentUpon>Viewpaymentform.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
