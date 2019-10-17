@@ -90,6 +90,30 @@
     <Compile Include="Managebookingform.Designer.cs">
       <DependentUpon>Managebookingform.cs</DependentUpon>
     </Compile>
+    <Compile Include="Managedailypriceform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Managedailypriceform.Designer.cs">
+      <DependentUpon>Managedailypriceform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manageemployeeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manageemployeeform.Designer.cs">
+      <DependentUpon>Manageemployeeform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manageguestform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manageguestform.Designer.cs">
+      <DependentUpon>Manageguestform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manageholidaypriceform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manageholidaypriceform.Designer.cs">
+      <DependentUpon>Manageholidaypriceform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manageroomfacilityform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +126,12 @@
     <Compile Include="Manageroomform.Designer.cs">
       <DependentUpon>Manageroomform.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manageroomrepairmentform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manageroomrepairmentform.Designer.cs">
+      <DependentUpon>Manageroomrepairmentform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manageroomtypeform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +140,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roomavailabilityreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roomavailabilityreport.Designer.cs">
+      <DependentUpon>Roomavailabilityreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactionreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactionreport.Designer.cs">
+      <DependentUpon>Transactionreport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Viewpaymentform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,11 +179,26 @@
     <EmbeddedResource Include="Managebookingform.resx">
       <DependentUpon>Managebookingform.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Managedailypriceform.resx">
+      <DependentUpon>Managedailypriceform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manageemployeeform.resx">
+      <DependentUpon>Manageemployeeform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manageguestform.resx">
+      <DependentUpon>Manageguestform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manageholidaypriceform.resx">
+      <DependentUpon>Manageholidaypriceform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manageroomfacilityform.resx">
       <DependentUpon>Manageroomfacilityform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manageroomform.resx">
       <DependentUpon>Manageroomform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manageroomrepairmentform.resx">
+      <DependentUpon>Manageroomrepairmentform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manageroomtypeform.resx">
       <DependentUpon>Manageroomtypeform.cs</DependentUpon>
@@ -155,6 +212,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Roomavailabilityreport.resx">
+      <DependentUpon>Roomavailabilityreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactionreport.resx">
+      <DependentUpon>Transactionreport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Viewpaymentform.resx">
       <DependentUpon>Viewpaymentform.cs</DependentUpon>
     </EmbeddedResource>

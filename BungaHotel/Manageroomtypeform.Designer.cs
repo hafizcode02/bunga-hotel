@@ -144,7 +144,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 20;
-            this.button2.Text = "Load Data";
+            this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -153,7 +153,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 21;
-            this.button3.Text = "Load Data";
+            this.button3.Text = "Edit";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -162,7 +162,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 22;
-            this.button4.Text = "Load Data";
+            this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // Manageroomtypeform

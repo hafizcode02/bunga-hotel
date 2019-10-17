@@ -16,7 +16,7 @@ namespace BungaHotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Manageroomform());
+            Application.Run(new Loginform());
         }
     }
 }

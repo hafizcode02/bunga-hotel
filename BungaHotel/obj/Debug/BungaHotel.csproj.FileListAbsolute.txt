@@ -15,3 +15,12 @@ C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHot
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Viewpaymentform.resources
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageroomtypeform.resources
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageroomform.resources
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.csprojResolveAssemblyReference.cache
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageroomfacilityform.resources
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageroomrepairmentform.resources
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Managedailypriceform.resources
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageholidaypriceform.resources
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageemployeeform.resources
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageguestform.resources
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Roomavailabilityreport.resources
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Transactionreport.resources

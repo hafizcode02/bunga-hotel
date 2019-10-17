@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace BungaHotel
 {
-    public class Koneksi
+    class Koneksi
     {
         public static string database = ("Data Source=DESKTOP-K1NGH4;Initial Catalog=bungahotel;Integrated Security=True");
         public SqlConnection koneksi = new SqlConnection(database);
         public SqlCommand cmd;
         public SqlDataAdapter adp = new SqlDataAdapter();
         public SqlDataReader dr;
-        public DataTable dt;
+        public DataTable dt = new DataTable();
         
         public void select(string query)
         {

@@ -55,6 +55,7 @@
             this.newpassword.Name = "newpassword";
             this.newpassword.Size = new System.Drawing.Size(261, 20);
             this.newpassword.TabIndex = 9;
+            this.newpassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -71,6 +72,7 @@
             this.oldpassword.Name = "oldpassword";
             this.oldpassword.Size = new System.Drawing.Size(261, 20);
             this.oldpassword.TabIndex = 7;
+            this.oldpassword.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -87,6 +89,7 @@
             this.confirmnewpassword.Name = "confirmnewpassword";
             this.confirmnewpassword.Size = new System.Drawing.Size(261, 20);
             this.confirmnewpassword.TabIndex = 11;
+            this.confirmnewpassword.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -103,8 +106,9 @@
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(75, 23);
             this.btn_save.TabIndex = 12;
-            this.btn_save.Text = "Login";
+            this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // Changepasswordform
             // 
