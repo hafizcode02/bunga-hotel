@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.email = new System.Windows.Forms.TextBox();
+            this.dg = new System.Windows.Forms.DataGridView();
+            this.btn_load = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guestid = new System.Windows.Forms.TextBox();
+            this.roomtypeid = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.description = new System.Windows.Forms.RichTextBox();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_refresh = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -56,29 +57,31 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Semerbak Bunga Hotel : Manage Room Type Form";
             // 
-            // dataGridView1
+            // dg
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 65);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(418, 423);
-            this.dataGridView1.TabIndex = 12;
+            this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg.Location = new System.Drawing.Point(16, 65);
+            this.dg.Name = "dg";
+            this.dg.Size = new System.Drawing.Size(418, 423);
+            this.dg.TabIndex = 12;
+            this.dg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellClick);
             // 
-            // button1
+            // btn_load
             // 
-            this.button1.Location = new System.Drawing.Point(332, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Load Data";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_load.Location = new System.Drawing.Point(332, 33);
+            this.btn_load.Name = "btn_load";
+            this.btn_load.Size = new System.Drawing.Size(75, 23);
+            this.btn_load.TabIndex = 11;
+            this.btn_load.Text = "Load Data";
+            this.btn_load.UseVisualStyleBackColor = true;
+            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
             // 
-            // email
+            // search
             // 
-            this.email.Location = new System.Drawing.Point(72, 35);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(251, 20);
-            this.email.TabIndex = 10;
+            this.search.Location = new System.Drawing.Point(72, 35);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(251, 20);
+            this.search.TabIndex = 10;
             // 
             // label1
             // 
@@ -89,12 +92,12 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Search";
             // 
-            // guestid
+            // roomtypeid
             // 
-            this.guestid.Location = new System.Drawing.Point(600, 81);
-            this.guestid.Name = "guestid";
-            this.guestid.Size = new System.Drawing.Size(119, 20);
-            this.guestid.TabIndex = 14;
+            this.roomtypeid.Location = new System.Drawing.Point(600, 81);
+            this.roomtypeid.Name = "roomtypeid";
+            this.roomtypeid.Size = new System.Drawing.Size(119, 20);
+            this.roomtypeid.TabIndex = 14;
             // 
             // label9
             // 
@@ -105,12 +108,12 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "Room Type ID";
             // 
-            // textBox1
+            // name
             // 
-            this.textBox1.Location = new System.Drawing.Point(600, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 20);
-            this.textBox1.TabIndex = 16;
+            this.name.Location = new System.Drawing.Point(600, 107);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(190, 20);
+            this.name.TabIndex = 16;
             // 
             // label2
             // 
@@ -130,64 +133,78 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Description";
             // 
-            // richTextBox1
+            // description
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(600, 133);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(258, 116);
-            this.richTextBox1.TabIndex = 19;
-            this.richTextBox1.Text = "";
+            this.description.Location = new System.Drawing.Point(600, 133);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(258, 116);
+            this.description.TabIndex = 19;
+            this.description.Text = "";
             // 
-            // button2
+            // btn_add
             // 
-            this.button2.Location = new System.Drawing.Point(551, 269);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_add.Location = new System.Drawing.Point(551, 269);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 20;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // button3
+            // btn_edit
             // 
-            this.button3.Location = new System.Drawing.Point(649, 269);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_edit.Location = new System.Drawing.Point(649, 269);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(75, 23);
+            this.btn_edit.TabIndex = 21;
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
-            // button4
+            // btn_delete
             // 
-            this.button4.Location = new System.Drawing.Point(744, 269);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_delete.Location = new System.Drawing.Point(744, 269);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 22;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(787, 8);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(75, 23);
+            this.btn_refresh.TabIndex = 79;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // Manageroomtypeform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 504);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.btn_refresh);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_edit);
+            this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.description);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.guestid);
+            this.Controls.Add(this.roomtypeid);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.email);
+            this.Controls.Add(this.dg);
+            this.Controls.Add(this.btn_load);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Name = "Manageroomtypeform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Semerbak Bunga Hotel : Manage Room Type Form";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,18 +213,19 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.DataGridView dg;
+        private System.Windows.Forms.Button btn_load;
+        private System.Windows.Forms.TextBox search;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox guestid;
+        private System.Windows.Forms.TextBox roomtypeid;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.RichTextBox description;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

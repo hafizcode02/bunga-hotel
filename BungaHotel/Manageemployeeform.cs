@@ -33,6 +33,7 @@ namespace BungaHotel
             dob.Text = "";
             male.Checked = false;
             female.Checked = false;
+            search.Text = "";
 
             employeeid.Enabled = false;
             btn_add.Enabled = true;
