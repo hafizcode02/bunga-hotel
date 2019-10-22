@@ -30,28 +30,40 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.roomtype = new System.Windows.Forms.ComboBox();
-            this.cidate = new System.Windows.Forms.DateTimePicker();
             this.btn_check = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.roomfloor = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.bookingtype = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guestid = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.linkadg = new System.Windows.Forms.LinkLabel();
-            this.linkrefresh = new System.Windows.Forms.LinkLabel();
-            this.guestnameemail = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.cidate = new System.Windows.Forms.DateTimePicker();
+            this.roomtype = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label20 = new System.Windows.Forms.Label();
             this.roomnumber = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.guestnameemail = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.linkrefresh = new System.Windows.Forms.LinkLabel();
+            this.linkadg = new System.Windows.Forms.LinkLabel();
+            this.guestid = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.bookingtype = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.roomfloor = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -65,22 +77,13 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.btn_submit = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -107,6 +110,58 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 111);
             this.panel1.TabIndex = 6;
+            // 
+            // btn_check
+            // 
+            this.btn_check.Location = new System.Drawing.Point(241, 83);
+            this.btn_check.Name = "btn_check";
+            this.btn_check.Size = new System.Drawing.Size(75, 23);
+            this.btn_check.TabIndex = 9;
+            this.btn_check.Text = "Check";
+            this.btn_check.UseVisualStyleBackColor = true;
+            // 
+            // cidate
+            // 
+            this.cidate.Location = new System.Drawing.Point(116, 60);
+            this.cidate.Name = "cidate";
+            this.cidate.Size = new System.Drawing.Size(200, 20);
+            this.cidate.TabIndex = 4;
+            // 
+            // roomtype
+            // 
+            this.roomtype.FormattingEnabled = true;
+            this.roomtype.Location = new System.Drawing.Point(116, 33);
+            this.roomtype.Name = "roomtype";
+            this.roomtype.Size = new System.Drawing.Size(200, 21);
+            this.roomtype.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Check In Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Room Type";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Check Room Availability";
             // 
             // panel2
             // 
@@ -139,158 +194,117 @@
             this.panel2.Size = new System.Drawing.Size(565, 393);
             this.panel2.TabIndex = 7;
             // 
-            // panel3
+            // dataGridView1
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.roomfloor);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(591, 35);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(323, 369);
-            this.panel3.TabIndex = 8;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 245);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(539, 136);
+            this.dataGridView1.TabIndex = 24;
             // 
-            // label1
+            // textBox8
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Check Room Availability";
+            this.textBox8.Location = new System.Drawing.Point(137, 216);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(48, 20);
+            this.textBox8.TabIndex = 23;
             // 
-            // label2
+            // label24
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Room Type";
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(9, 219);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(23, 13);
+            this.label24.TabIndex = 22;
+            this.label24.Text = "Qty";
             // 
-            // label4
+            // comboBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Check In Date";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(137, 189);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 21);
+            this.comboBox1.TabIndex = 21;
             // 
-            // roomtype
+            // label23
             // 
-            this.roomtype.FormattingEnabled = true;
-            this.roomtype.Location = new System.Drawing.Point(116, 33);
-            this.roomtype.Name = "roomtype";
-            this.roomtype.Size = new System.Drawing.Size(200, 21);
-            this.roomtype.TabIndex = 3;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(9, 193);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(88, 13);
+            this.label23.TabIndex = 20;
+            this.label23.Text = "Additional Facility";
             // 
-            // cidate
+            // textBox7
             // 
-            this.cidate.Location = new System.Drawing.Point(116, 60);
-            this.cidate.Name = "cidate";
-            this.cidate.Size = new System.Drawing.Size(200, 20);
-            this.cidate.TabIndex = 4;
+            this.textBox7.Location = new System.Drawing.Point(137, 163);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(48, 20);
+            this.textBox7.TabIndex = 19;
             // 
-            // btn_check
+            // label22
             // 
-            this.btn_check.Location = new System.Drawing.Point(241, 83);
-            this.btn_check.Name = "btn_check";
-            this.btn_check.Size = new System.Drawing.Size(75, 23);
-            this.btn_check.TabIndex = 9;
-            this.btn_check.Text = "Check";
-            this.btn_check.UseVisualStyleBackColor = true;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(9, 166);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(55, 13);
+            this.label22.TabIndex = 18;
+            this.label22.Text = "Long Stay";
             // 
-            // label5
+            // label21
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Room Map";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(369, 141);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(10, 13);
+            this.label21.TabIndex = 17;
+            this.label21.Text = ":";
             // 
-            // roomfloor
+            // textBox6
             // 
-            this.roomfloor.FormattingEnabled = true;
-            this.roomfloor.Location = new System.Drawing.Point(71, 33);
-            this.roomfloor.Name = "roomfloor";
-            this.roomfloor.Size = new System.Drawing.Size(100, 21);
-            this.roomfloor.TabIndex = 5;
+            this.textBox6.Location = new System.Drawing.Point(380, 137);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(24, 20);
+            this.textBox6.TabIndex = 16;
             // 
-            // label6
+            // textBox5
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 37);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Floor";
+            this.textBox5.Location = new System.Drawing.Point(343, 137);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(24, 20);
+            this.textBox5.TabIndex = 15;
             // 
-            // label7
+            // dateTimePicker1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 15);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Booking Room";
+            this.dateTimePicker1.Location = new System.Drawing.Point(137, 137);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 10;
             // 
-            // bookingtype
+            // label20
             // 
-            this.bookingtype.FormattingEnabled = true;
-            this.bookingtype.Location = new System.Drawing.Point(137, 31);
-            this.bookingtype.Name = "bookingtype";
-            this.bookingtype.Size = new System.Drawing.Size(176, 21);
-            this.bookingtype.TabIndex = 5;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(9, 141);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(108, 13);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Check-In Date - Hour";
             // 
-            // label8
+            // roomnumber
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 35);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Booking Type";
+            this.roomnumber.Location = new System.Drawing.Point(137, 111);
+            this.roomnumber.Name = "roomnumber";
+            this.roomnumber.Size = new System.Drawing.Size(119, 20);
+            this.roomnumber.TabIndex = 13;
             // 
-            // guestid
+            // label11
             // 
-            this.guestid.Location = new System.Drawing.Point(137, 58);
-            this.guestid.Name = "guestid";
-            this.guestid.Size = new System.Drawing.Size(119, 20);
-            this.guestid.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 62);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Guest ID";
-            // 
-            // linkadg
-            // 
-            this.linkadg.AutoSize = true;
-            this.linkadg.Location = new System.Drawing.Point(263, 64);
-            this.linkadg.Name = "linkadg";
-            this.linkadg.Size = new System.Drawing.Size(82, 13);
-            this.linkadg.TabIndex = 8;
-            this.linkadg.TabStop = true;
-            this.linkadg.Text = "Add New Guest";
-            // 
-            // linkrefresh
-            // 
-            this.linkrefresh.AutoSize = true;
-            this.linkrefresh.Location = new System.Drawing.Point(347, 64);
-            this.linkrefresh.Name = "linkrefresh";
-            this.linkrefresh.Size = new System.Drawing.Size(44, 13);
-            this.linkrefresh.TabIndex = 9;
-            this.linkrefresh.TabStop = true;
-            this.linkrefresh.Text = "Refresh";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(9, 114);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 13);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Room Number";
             // 
             // guestnameemail
             // 
@@ -309,21 +323,109 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Guest Name - Email";
             // 
-            // roomnumber
+            // linkrefresh
             // 
-            this.roomnumber.Location = new System.Drawing.Point(137, 111);
-            this.roomnumber.Name = "roomnumber";
-            this.roomnumber.Size = new System.Drawing.Size(119, 20);
-            this.roomnumber.TabIndex = 13;
+            this.linkrefresh.AutoSize = true;
+            this.linkrefresh.Location = new System.Drawing.Point(347, 64);
+            this.linkrefresh.Name = "linkrefresh";
+            this.linkrefresh.Size = new System.Drawing.Size(44, 13);
+            this.linkrefresh.TabIndex = 9;
+            this.linkrefresh.TabStop = true;
+            this.linkrefresh.Text = "Refresh";
             // 
-            // label11
+            // linkadg
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 114);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Room Number";
+            this.linkadg.AutoSize = true;
+            this.linkadg.Location = new System.Drawing.Point(263, 64);
+            this.linkadg.Name = "linkadg";
+            this.linkadg.Size = new System.Drawing.Size(82, 13);
+            this.linkadg.TabIndex = 8;
+            this.linkadg.TabStop = true;
+            this.linkadg.Text = "Add New Guest";
+            // 
+            // guestid
+            // 
+            this.guestid.Location = new System.Drawing.Point(137, 58);
+            this.guestid.Name = "guestid";
+            this.guestid.Size = new System.Drawing.Size(119, 20);
+            this.guestid.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 62);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Guest ID";
+            // 
+            // bookingtype
+            // 
+            this.bookingtype.FormattingEnabled = true;
+            this.bookingtype.Location = new System.Drawing.Point(137, 31);
+            this.bookingtype.Name = "bookingtype";
+            this.bookingtype.Size = new System.Drawing.Size(176, 21);
+            this.bookingtype.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 35);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Booking Type";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(101, 15);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Booking Room";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.roomfloor);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Location = new System.Drawing.Point(591, 35);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(323, 369);
+            this.panel3.TabIndex = 8;
+            // 
+            // roomfloor
+            // 
+            this.roomfloor.FormattingEnabled = true;
+            this.roomfloor.Location = new System.Drawing.Point(71, 33);
+            this.roomfloor.Name = "roomfloor";
+            this.roomfloor.Size = new System.Drawing.Size(100, 21);
+            this.roomfloor.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 37);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Floor";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 15);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Room Map";
             // 
             // textBox1
             // 
@@ -434,101 +536,32 @@
             this.btn_submit.Text = "Submit";
             this.btn_submit.UseVisualStyleBackColor = true;
             // 
-            // label20
+            // button1
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(9, 141);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(108, 13);
-            this.label20.TabIndex = 14;
-            this.label20.Text = "Check-In Date - Hour";
+            this.button1.Location = new System.Drawing.Point(57, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Check";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // button2
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(137, 137);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.button2.Location = new System.Drawing.Point(57, 306);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Check";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // button3
             // 
-            this.textBox5.Location = new System.Drawing.Point(343, 137);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(24, 20);
-            this.textBox5.TabIndex = 15;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(380, 137);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(24, 20);
-            this.textBox6.TabIndex = 16;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(369, 141);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(10, 13);
-            this.label21.TabIndex = 17;
-            this.label21.Text = ":";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(137, 163);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(48, 20);
-            this.textBox7.TabIndex = 19;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(9, 166);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(55, 13);
-            this.label22.TabIndex = 18;
-            this.label22.Text = "Long Stay";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(137, 189);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 21);
-            this.comboBox1.TabIndex = 21;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(9, 193);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(88, 13);
-            this.label23.TabIndex = 20;
-            this.label23.Text = "Additional Facility";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(137, 216);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(48, 20);
-            this.textBox8.TabIndex = 23;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(9, 219);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(23, 13);
-            this.label24.TabIndex = 22;
-            this.label24.Text = "Qty";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 245);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(539, 136);
-            this.dataGridView1.TabIndex = 24;
+            this.button3.Location = new System.Drawing.Point(196, 306);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Check";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Bookingroomform
             // 
@@ -559,9 +592,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -618,5 +651,8 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

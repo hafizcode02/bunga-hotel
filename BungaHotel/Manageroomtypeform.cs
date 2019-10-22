@@ -43,6 +43,9 @@ namespace BungaHotel
             koneksi.select("select * from tipekamar");
             koneksi.adp.Fill(dt);
             dg.DataSource = dt;
+            dg.Columns[0].HeaderText = "Room Type ID";
+            dg.Columns[1].HeaderText = "Room Type Name";
+            dg.Columns[2].HeaderText = "Description";
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -109,6 +112,9 @@ namespace BungaHotel
             koneksi.select("select * from tipekamar where idtipekamar like '%" + search.Text + "%' or namatipekamar like '%" + search.Text + "%' or deskripsi like '%" + search.Text + "%'");
             koneksi.adp.Fill(dt);
             dg.DataSource = dt;
+            dg.Columns[0].HeaderText = "Room Type ID";
+            dg.Columns[1].HeaderText = "Room Type Name";
+            dg.Columns[2].HeaderText = "Description";
         }
 
         private void dg_CellClick(object sender, DataGridViewCellEventArgs e)

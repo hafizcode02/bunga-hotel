@@ -100,7 +100,7 @@ namespace BungaHotel
 
         private void manageRoomRepairmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Manageroomrepairmentform mrp = new Manageroomrepairmentform();
+            Manageroomrepairmentform mrp = new Manageroomrepairmentform(idkaryawan);
             mrp.ShowDialog();
         }
 

@@ -49,6 +49,14 @@ namespace BungaHotel
             dg.DataSource = dt;
             dg.Columns[6].Visible = false;
             dg.Columns[7].Visible = false;
+            dg.Columns[0].HeaderText = "Guest ID";
+            dg.Columns[1].HeaderText = "Guest Name";
+            dg.Columns[2].HeaderText = "ID Card Number";
+            dg.Columns[3].HeaderText = "Email";
+            dg.Columns[4].HeaderText = "Phone Number";
+            dg.Columns[5].HeaderText = "Vehicle License Number";
+            dg.Columns[8].HeaderText = "Vehicle Type";
+
         }
 
         public void cbitem()
@@ -150,6 +158,13 @@ namespace BungaHotel
             dg.DataSource = dt;
             dg.Columns[6].Visible = false;
             dg.Columns[7].Visible = false;
+            dg.Columns[0].HeaderText = "Guest ID";
+            dg.Columns[1].HeaderText = "Guest Name";
+            dg.Columns[2].HeaderText = "ID Card Number";
+            dg.Columns[3].HeaderText = "Email";
+            dg.Columns[4].HeaderText = "Phone Number";
+            dg.Columns[5].HeaderText = "Vehicle License Number";
+            dg.Columns[8].HeaderText = "Vehicle Type";
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
@@ -162,7 +177,7 @@ namespace BungaHotel
                     MessageBox.Show("Please Fill All Columns");
                 }else
                 {
-                    if(cbvt.SelectedIndex < 1)
+                    if(cbvt.SelectedIndex < 0)
                     {
                         koneksi.cud("update penghuni set namapenghuni='" + guestname.Text
                             + "',nomorktp='" + idcardnumber.Text

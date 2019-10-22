@@ -46,6 +46,11 @@ namespace BungaHotel
             koneksi.adp.Fill(dt);
             dg.DataSource = dt;
             dg.Columns[4].Visible = false;
+            dg.Columns[0].HeaderText = "Room ID";
+            dg.Columns[1].HeaderText = "Room Type Name";
+            dg.Columns[2].HeaderText = "Room Number";
+            dg.Columns[3].HeaderText = "Floor";
+
         }
 
         public void viewcb()
@@ -101,7 +106,7 @@ namespace BungaHotel
                 }
                 else
                 {
-                    if (cbrt.SelectedIndex > 1)
+                    if (cbrt.SelectedIndex < 0)
                     {
                         koneksi.cud("update kamar set nomorkamar='" + roomnumber.Text + "',lantai='" + floor.Text + "',idtipekamar='" + idrt + "' where idkamar='" + roomid.Text + "'");
                         MessageBox.Show("Update data success");
@@ -170,6 +175,10 @@ namespace BungaHotel
             koneksi.adp.Fill(dt);
             dg.DataSource = dt;
             dg.Columns[4].Visible = false;
+            dg.Columns[0].HeaderText = "Room ID";
+            dg.Columns[1].HeaderText = "Room Type Name";
+            dg.Columns[2].HeaderText = "Room Number";
+            dg.Columns[3].HeaderText = "Floor";
         }
     }
 }

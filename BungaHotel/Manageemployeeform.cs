@@ -50,7 +50,11 @@ namespace BungaHotel
             koneksi.select("select * from karyawan");
             koneksi.adp.Fill(dt);
             dg.DataSource = dt;
-            dg.Columns[0].Visible = false;
+            dg.Columns[0].HeaderText = "Employee ID";
+            dg.Columns[1].HeaderText = "Employee Name";
+            dg.Columns[4].HeaderText = "Date Of Birth";
+            dg.Columns[5].HeaderText = "Gender";
+
         }
 
 
@@ -194,7 +198,10 @@ namespace BungaHotel
             koneksi.select("select * from karyawan where namakaryawan LIKE'%" + search.Text + "%' or email LIKE'%" + search.Text + "%'");
             koneksi.adp.Fill(load);
             dg.DataSource = load;
-            dg.Columns[0].Visible = false;
+            dg.Columns[0].HeaderText = "Employee ID";
+            dg.Columns[1].HeaderText = "Employee Name";
+            dg.Columns[4].HeaderText = "Date Of Birth";
+            dg.Columns[5].HeaderText = "Gender";
         }
     }
 }
