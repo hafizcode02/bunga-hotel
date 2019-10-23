@@ -12,9 +12,16 @@ namespace BungaHotel
 {
     public partial class Viewpaymentform : Form
     {
+        Koneksi koneksi = new Koneksi();
+        DataTable dt = new DataTable();
         public Viewpaymentform()
         {
             InitializeComponent();
+        }
+
+        private void dg_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

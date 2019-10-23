@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_check = new System.Windows.Forms.Button();
@@ -37,16 +38,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_add = new System.Windows.Forms.Button();
             this.dg = new System.Windows.Forms.DataGridView();
+            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idfasilitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namafasilitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.qty = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.addfacility = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.longstay = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.minute = new System.Windows.Forms.TextBox();
+            this.hour = new System.Windows.Forms.TextBox();
             this.cidatetime = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.roomnumber = new System.Windows.Forms.TextBox();
@@ -61,35 +68,31 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.cbroomnumber = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.roomfloor = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.roomprice = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.facilitytotalprice = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.alltotalprice = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tax = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.btn_submit = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idfasilitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namafasilitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
@@ -183,11 +186,11 @@
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.addfacility);
             this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.longstay);
             this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.label21);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.minute);
+            this.panel2.Controls.Add(this.hour);
             this.panel2.Controls.Add(this.cidatetime);
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.roomnumber);
@@ -206,6 +209,16 @@
             this.panel2.Size = new System.Drawing.Size(565, 393);
             this.panel2.TabIndex = 7;
             // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(254, 214);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 26;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
             // dg
             // 
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -221,6 +234,34 @@
             this.dg.TabIndex = 24;
             this.dg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellClick);
             this.dg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // no
+            // 
+            this.no.HeaderText = "No";
+            this.no.Name = "no";
+            // 
+            // idfasilitas
+            // 
+            this.idfasilitas.HeaderText = "Facility  ID";
+            this.idfasilitas.Name = "idfasilitas";
+            this.idfasilitas.Visible = false;
+            // 
+            // namafasilitas
+            // 
+            this.namafasilitas.HeaderText = "Additional Facility Name";
+            this.namafasilitas.Name = "namafasilitas";
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "Delete";
+            this.delete.Name = "delete";
+            this.delete.Text = "Delete";
+            this.delete.UseColumnTextForButtonValue = true;
             // 
             // qty
             // 
@@ -255,12 +296,13 @@
             this.label23.TabIndex = 20;
             this.label23.Text = "Additional Facility";
             // 
-            // textBox7
+            // longstay
             // 
-            this.textBox7.Location = new System.Drawing.Point(137, 163);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(48, 20);
-            this.textBox7.TabIndex = 19;
+            this.longstay.Location = new System.Drawing.Point(137, 163);
+            this.longstay.Name = "longstay";
+            this.longstay.Size = new System.Drawing.Size(48, 20);
+            this.longstay.TabIndex = 19;
+            this.longstay.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label22
             // 
@@ -280,19 +322,19 @@
             this.label21.TabIndex = 17;
             this.label21.Text = ":";
             // 
-            // textBox6
+            // minute
             // 
-            this.textBox6.Location = new System.Drawing.Point(380, 137);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(24, 20);
-            this.textBox6.TabIndex = 16;
+            this.minute.Location = new System.Drawing.Point(380, 137);
+            this.minute.Name = "minute";
+            this.minute.Size = new System.Drawing.Size(24, 20);
+            this.minute.TabIndex = 16;
             // 
-            // textBox5
+            // hour
             // 
-            this.textBox5.Location = new System.Drawing.Point(343, 137);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(24, 20);
-            this.textBox5.TabIndex = 15;
+            this.hour.Location = new System.Drawing.Point(343, 137);
+            this.hour.Name = "hour";
+            this.hour.Size = new System.Drawing.Size(24, 20);
+            this.hour.TabIndex = 15;
             // 
             // cidatetime
             // 
@@ -316,6 +358,7 @@
             this.roomnumber.Name = "roomnumber";
             this.roomnumber.Size = new System.Drawing.Size(119, 20);
             this.roomnumber.TabIndex = 13;
+            this.roomnumber.TextChanged += new System.EventHandler(this.roomnumber_TextChanged);
             // 
             // label11
             // 
@@ -412,7 +455,8 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.label28);
+            this.panel3.Controls.Add(this.cbroomnumber);
             this.panel3.Controls.Add(this.label27);
             this.panel3.Controls.Add(this.label26);
             this.panel3.Controls.Add(this.label25);
@@ -426,6 +470,51 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(323, 369);
             this.panel3.TabIndex = 8;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(177, 37);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(75, 13);
+            this.label28.TabIndex = 29;
+            this.label28.Text = "Room Number";
+            // 
+            // cbroomnumber
+            // 
+            this.cbroomnumber.FormattingEnabled = true;
+            this.cbroomnumber.Location = new System.Drawing.Point(258, 33);
+            this.cbroomnumber.Name = "cbroomnumber";
+            this.cbroomnumber.Size = new System.Drawing.Size(40, 21);
+            this.cbroomnumber.TabIndex = 28;
+            this.cbroomnumber.SelectedIndexChanged += new System.EventHandler(this.cbroomnumber_SelectedIndexChanged);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(138, 336);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(53, 13);
+            this.label27.TabIndex = 27;
+            this.label27.Text = "Occupied";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(138, 306);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(50, 13);
+            this.label26.TabIndex = 26;
+            this.label26.Text = "Available";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(3, 306);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(30, 13);
+            this.label25.TabIndex = 25;
+            this.label25.Text = "Note";
             // 
             // button3
             // 
@@ -461,10 +550,11 @@
             // roomfloor
             // 
             this.roomfloor.FormattingEnabled = true;
-            this.roomfloor.Location = new System.Drawing.Point(71, 33);
+            this.roomfloor.Location = new System.Drawing.Point(64, 33);
             this.roomfloor.Name = "roomfloor";
             this.roomfloor.Size = new System.Drawing.Size(100, 21);
             this.roomfloor.TabIndex = 5;
+            this.roomfloor.SelectedIndexChanged += new System.EventHandler(this.roomfloor_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -485,12 +575,12 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Room Map";
             // 
-            // textBox1
+            // roomprice
             // 
-            this.textBox1.Location = new System.Drawing.Point(788, 410);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 15;
+            this.roomprice.Location = new System.Drawing.Point(788, 410);
+            this.roomprice.Name = "roomprice";
+            this.roomprice.Size = new System.Drawing.Size(119, 20);
+            this.roomprice.TabIndex = 15;
             // 
             // label12
             // 
@@ -519,12 +609,12 @@
             this.label14.TabIndex = 19;
             this.label14.Text = "Rp.";
             // 
-            // textBox2
+            // facilitytotalprice
             // 
-            this.textBox2.Location = new System.Drawing.Point(788, 436);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(119, 20);
-            this.textBox2.TabIndex = 18;
+            this.facilitytotalprice.Location = new System.Drawing.Point(788, 436);
+            this.facilitytotalprice.Name = "facilitytotalprice";
+            this.facilitytotalprice.Size = new System.Drawing.Size(119, 20);
+            this.facilitytotalprice.TabIndex = 18;
             // 
             // label15
             // 
@@ -544,12 +634,12 @@
             this.label16.TabIndex = 25;
             this.label16.Text = "Rp.";
             // 
-            // textBox3
+            // alltotalprice
             // 
-            this.textBox3.Location = new System.Drawing.Point(788, 488);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(119, 20);
-            this.textBox3.TabIndex = 24;
+            this.alltotalprice.Location = new System.Drawing.Point(788, 488);
+            this.alltotalprice.Name = "alltotalprice";
+            this.alltotalprice.Size = new System.Drawing.Size(119, 20);
+            this.alltotalprice.TabIndex = 24;
             // 
             // label17
             // 
@@ -569,12 +659,12 @@
             this.label18.TabIndex = 22;
             this.label18.Text = "Rp.";
             // 
-            // textBox4
+            // tax
             // 
-            this.textBox4.Location = new System.Drawing.Point(788, 462);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(119, 20);
-            this.textBox4.TabIndex = 21;
+            this.tax.Location = new System.Drawing.Point(788, 462);
+            this.tax.Name = "tax";
+            this.tax.Size = new System.Drawing.Size(119, 20);
+            this.tax.TabIndex = 21;
             // 
             // label19
             // 
@@ -593,80 +683,11 @@
             this.btn_submit.TabIndex = 10;
             this.btn_submit.Text = "Submit";
             this.btn_submit.UseVisualStyleBackColor = true;
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
-            // label25
+            // timer1
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(3, 306);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(30, 13);
-            this.label25.TabIndex = 25;
-            this.label25.Text = "Note";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(138, 306);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(50, 13);
-            this.label26.TabIndex = 26;
-            this.label26.Text = "Available";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(138, 336);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(53, 13);
-            this.label27.TabIndex = 27;
-            this.label27.Text = "Occupied";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(30, 104);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Room1";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // btn_add
-            // 
-            this.btn_add.Location = new System.Drawing.Point(254, 214);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(75, 23);
-            this.btn_add.TabIndex = 26;
-            this.btn_add.Text = "Add";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // no
-            // 
-            this.no.HeaderText = "No";
-            this.no.Name = "no";
-            // 
-            // idfasilitas
-            // 
-            this.idfasilitas.HeaderText = "Facility  ID";
-            this.idfasilitas.Name = "idfasilitas";
-            this.idfasilitas.Visible = false;
-            // 
-            // namafasilitas
-            // 
-            this.namafasilitas.HeaderText = "Additional Facility Name";
-            this.namafasilitas.Name = "namafasilitas";
-            // 
-            // price
-            // 
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
-            // 
-            // delete
-            // 
-            this.delete.HeaderText = "Delete";
-            this.delete.Name = "delete";
-            this.delete.Text = "Delete";
-            this.delete.UseColumnTextForButtonValue = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Bookingroomform
             // 
@@ -675,16 +696,16 @@
             this.ClientSize = new System.Drawing.Size(926, 557);
             this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.alltotalprice);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tax);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.facilitytotalprice);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.roomprice);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -731,25 +752,25 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox roomnumber;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox roomprice;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox facilitytotalprice;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox alltotalprice;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tax;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btn_submit;
         private System.Windows.Forms.DateTimePicker cidatetime;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox minute;
+        private System.Windows.Forms.TextBox hour;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox longstay;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox addfacility;
         private System.Windows.Forms.Label label23;
@@ -762,12 +783,14 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.DataGridViewTextBoxColumn no;
         private System.Windows.Forms.DataGridViewTextBoxColumn idfasilitas;
         private System.Windows.Forms.DataGridViewTextBoxColumn namafasilitas;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox cbroomnumber;
+        private System.Windows.Forms.Label label28;
     }
 }

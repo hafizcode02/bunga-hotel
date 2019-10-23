@@ -28,30 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dg = new System.Windows.Forms.DataGridView();
+            this.btn_load = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.email = new System.Windows.Forms.TextBox();
+            this.search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.paymentid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guestname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeename = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remaindebt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dg
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 70);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(901, 423);
-            this.dataGridView1.TabIndex = 13;
+            this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.paymentid,
+            this.paymentdate,
+            this.bookingid,
+            this.guestname,
+            this.roomno,
+            this.employeename,
+            this.payment,
+            this.remaindebt,
+            this.status});
+            this.dg.Location = new System.Drawing.Point(14, 70);
+            this.dg.Name = "dg";
+            this.dg.Size = new System.Drawing.Size(901, 423);
+            this.dg.TabIndex = 13;
+            this.dg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellClick);
             // 
-            // button1
+            // btn_load
             // 
-            this.button1.Location = new System.Drawing.Point(404, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Load Data";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_load.Location = new System.Drawing.Point(404, 36);
+            this.btn_load.Name = "btn_load";
+            this.btn_load.Size = new System.Drawing.Size(75, 23);
+            this.btn_load.TabIndex = 12;
+            this.btn_load.Text = "Load Data";
+            this.btn_load.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -64,12 +84,12 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Semerbak Bunga Hotel : View Payment Form";
             // 
-            // email
+            // search
             // 
-            this.email.Location = new System.Drawing.Point(125, 40);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(251, 20);
-            this.email.TabIndex = 10;
+            this.search.Location = new System.Drawing.Point(125, 40);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(251, 20);
+            this.search.TabIndex = 10;
             // 
             // label1
             // 
@@ -80,20 +100,65 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Search";
             // 
+            // paymentid
+            // 
+            this.paymentid.HeaderText = "Payment ID";
+            this.paymentid.Name = "paymentid";
+            // 
+            // paymentdate
+            // 
+            this.paymentdate.HeaderText = "Payment Date";
+            this.paymentdate.Name = "paymentdate";
+            // 
+            // bookingid
+            // 
+            this.bookingid.HeaderText = "Booking ID";
+            this.bookingid.Name = "bookingid";
+            // 
+            // guestname
+            // 
+            this.guestname.HeaderText = "Guest Name";
+            this.guestname.Name = "guestname";
+            // 
+            // roomno
+            // 
+            this.roomno.HeaderText = "Room No";
+            this.roomno.Name = "roomno";
+            // 
+            // employeename
+            // 
+            this.employeename.HeaderText = "Employee Name";
+            this.employeename.Name = "employeename";
+            // 
+            // payment
+            // 
+            this.payment.HeaderText = "Payment";
+            this.payment.Name = "payment";
+            // 
+            // remaindebt
+            // 
+            this.remaindebt.HeaderText = "Remain Debt";
+            this.remaindebt.Name = "remaindebt";
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            // 
             // Viewpaymentform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 505);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dg);
+            this.Controls.Add(this.btn_load);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.email);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.label1);
             this.Name = "Viewpaymentform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Semerbak Bunga Hotel : View PaymentForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,10 +166,19 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dg;
+        private System.Windows.Forms.Button btn_load;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox search;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paymentid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paymentdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookingid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn guestname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeename;
+        private System.Windows.Forms.DataGridViewTextBoxColumn payment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn remaindebt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
     }
 }

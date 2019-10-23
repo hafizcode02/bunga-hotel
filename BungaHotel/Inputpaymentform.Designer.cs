@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.roomtype = new System.Windows.Forms.ComboBox();
+            this.bookingid = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.remainingpayment = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.payment = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.balance = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cidate = new System.Windows.Forms.DateTimePicker();
+            this.pdate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_submit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -56,13 +56,13 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Semerbak Bunga Hotel : Input Payment Form";
             // 
-            // roomtype
+            // bookingid
             // 
-            this.roomtype.FormattingEnabled = true;
-            this.roomtype.Location = new System.Drawing.Point(161, 34);
-            this.roomtype.Name = "roomtype";
-            this.roomtype.Size = new System.Drawing.Size(200, 21);
-            this.roomtype.TabIndex = 9;
+            this.bookingid.FormattingEnabled = true;
+            this.bookingid.Location = new System.Drawing.Point(161, 34);
+            this.bookingid.Name = "bookingid";
+            this.bookingid.Size = new System.Drawing.Size(200, 21);
+            this.bookingid.TabIndex = 9;
             // 
             // label2
             // 
@@ -82,12 +82,12 @@
             this.label13.TabIndex = 19;
             this.label13.Text = "Rp.";
             // 
-            // textBox1
+            // remainingpayment
             // 
-            this.textBox1.Location = new System.Drawing.Point(239, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 18;
+            this.remainingpayment.Location = new System.Drawing.Point(239, 61);
+            this.remainingpayment.Name = "remainingpayment";
+            this.remainingpayment.Size = new System.Drawing.Size(119, 20);
+            this.remainingpayment.TabIndex = 18;
             // 
             // label12
             // 
@@ -107,12 +107,12 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Rp.";
             // 
-            // textBox2
+            // payment
             // 
-            this.textBox2.Location = new System.Drawing.Point(239, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(119, 20);
-            this.textBox2.TabIndex = 21;
+            this.payment.Location = new System.Drawing.Point(239, 87);
+            this.payment.Name = "payment";
+            this.payment.Size = new System.Drawing.Size(119, 20);
+            this.payment.TabIndex = 21;
             // 
             // label4
             // 
@@ -132,12 +132,12 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Rp.";
             // 
-            // textBox3
+            // balance
             // 
-            this.textBox3.Location = new System.Drawing.Point(239, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(119, 20);
-            this.textBox3.TabIndex = 24;
+            this.balance.Location = new System.Drawing.Point(239, 113);
+            this.balance.Name = "balance";
+            this.balance.Size = new System.Drawing.Size(119, 20);
+            this.balance.TabIndex = 24;
             // 
             // label6
             // 
@@ -148,12 +148,12 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Balance";
             // 
-            // cidate
+            // pdate
             // 
-            this.cidate.Location = new System.Drawing.Point(161, 139);
-            this.cidate.Name = "cidate";
-            this.cidate.Size = new System.Drawing.Size(200, 20);
-            this.cidate.TabIndex = 27;
+            this.pdate.Location = new System.Drawing.Point(161, 139);
+            this.pdate.Name = "pdate";
+            this.pdate.Size = new System.Drawing.Size(200, 20);
+            this.pdate.TabIndex = 27;
             // 
             // label7
             // 
@@ -172,6 +172,7 @@
             this.btn_submit.TabIndex = 28;
             this.btn_submit.Text = "Submit";
             this.btn_submit.UseVisualStyleBackColor = true;
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // Inputpaymentform
             // 
@@ -179,23 +180,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 196);
             this.Controls.Add(this.btn_submit);
-            this.Controls.Add(this.cidate);
+            this.Controls.Add(this.pdate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.balance);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.payment);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.remainingpayment);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.roomtype);
+            this.Controls.Add(this.bookingid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Name = "Inputpaymentform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Semerbak Bunga Hotel : Input Payment Form";
+            this.Load += new System.EventHandler(this.Inputpaymentform_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,18 +206,18 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox roomtype;
+        private System.Windows.Forms.ComboBox bookingid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox remainingpayment;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox payment;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox balance;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker cidate;
+        private System.Windows.Forms.DateTimePicker pdate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_submit;
     }

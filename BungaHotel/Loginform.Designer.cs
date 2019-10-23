@@ -52,6 +52,7 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(242, 20);
             this.email.TabIndex = 1;
+            this.email.Text = "hafizcode02@gmail.com";
             // 
             // label2
             // 
@@ -68,7 +69,9 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(242, 20);
             this.password.TabIndex = 3;
+            this.password.Text = "kinghafiz02";
             this.password.UseSystemPasswordChar = true;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // label3
             // 

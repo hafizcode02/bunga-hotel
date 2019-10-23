@@ -18,6 +18,8 @@ namespace BungaHotel
         public Loginform()
         {
             InitializeComponent();
+            email.Enabled = false;
+            password.Enabled = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -49,6 +51,11 @@ namespace BungaHotel
                     this.Close();
                 }
             }
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,9 +12,20 @@ namespace BungaHotel
 {
     public partial class Inputpaymentform : Form
     {
+        Koneksi koneksi = new Koneksi();
         public Inputpaymentform()
         {
             InitializeComponent();
+        }
+
+        private void Inputpaymentform_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_submit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
