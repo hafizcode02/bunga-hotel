@@ -48,6 +48,7 @@
             this.floor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facility = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
@@ -219,11 +220,22 @@
             this.delete.Text = "Delete";
             this.delete.UseColumnTextForButtonValue = true;
             // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(709, 6);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(75, 23);
+            this.btn_refresh.TabIndex = 54;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
             // Manageroomfacilityform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 498);
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.dg);
             this.Controls.Add(this.btn_load);
             this.Controls.Add(this.search);
@@ -263,5 +275,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn floor;
         private System.Windows.Forms.DataGridViewTextBoxColumn facility;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

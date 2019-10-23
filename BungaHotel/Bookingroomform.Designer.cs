@@ -37,17 +37,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.dg = new System.Windows.Forms.DataGridView();
+            this.qty = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.addfacility = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cidatetime = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.roomnumber = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,6 +61,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.roomfloor = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -77,12 +80,19 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.btn_submit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idfasilitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namafasilitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,6 +129,7 @@
             this.btn_check.TabIndex = 9;
             this.btn_check.Text = "Check";
             this.btn_check.UseVisualStyleBackColor = true;
+            this.btn_check.Click += new System.EventHandler(this.btn_check_Click);
             // 
             // cidate
             // 
@@ -166,17 +177,18 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.btn_add);
+            this.panel2.Controls.Add(this.dg);
+            this.panel2.Controls.Add(this.qty);
             this.panel2.Controls.Add(this.label24);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.addfacility);
             this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.cidatetime);
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.roomnumber);
             this.panel2.Controls.Add(this.label11);
@@ -194,20 +206,28 @@
             this.panel2.Size = new System.Drawing.Size(565, 393);
             this.panel2.TabIndex = 7;
             // 
-            // dataGridView1
+            // dg
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 245);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(539, 136);
-            this.dataGridView1.TabIndex = 24;
+            this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.no,
+            this.idfasilitas,
+            this.namafasilitas,
+            this.price,
+            this.delete});
+            this.dg.Location = new System.Drawing.Point(11, 245);
+            this.dg.Name = "dg";
+            this.dg.Size = new System.Drawing.Size(539, 136);
+            this.dg.TabIndex = 24;
+            this.dg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellClick);
+            this.dg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // textBox8
+            // qty
             // 
-            this.textBox8.Location = new System.Drawing.Point(137, 216);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(48, 20);
-            this.textBox8.TabIndex = 23;
+            this.qty.Location = new System.Drawing.Point(137, 216);
+            this.qty.Name = "qty";
+            this.qty.Size = new System.Drawing.Size(48, 20);
+            this.qty.TabIndex = 23;
             // 
             // label24
             // 
@@ -218,13 +238,13 @@
             this.label24.TabIndex = 22;
             this.label24.Text = "Qty";
             // 
-            // comboBox1
+            // addfacility
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(137, 189);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 21);
-            this.comboBox1.TabIndex = 21;
+            this.addfacility.FormattingEnabled = true;
+            this.addfacility.Location = new System.Drawing.Point(137, 189);
+            this.addfacility.Name = "addfacility";
+            this.addfacility.Size = new System.Drawing.Size(151, 21);
+            this.addfacility.TabIndex = 21;
             // 
             // label23
             // 
@@ -274,12 +294,12 @@
             this.textBox5.Size = new System.Drawing.Size(24, 20);
             this.textBox5.TabIndex = 15;
             // 
-            // dateTimePicker1
+            // cidatetime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(137, 137);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.cidatetime.Location = new System.Drawing.Point(137, 137);
+            this.cidatetime.Name = "cidatetime";
+            this.cidatetime.Size = new System.Drawing.Size(200, 20);
+            this.cidatetime.TabIndex = 10;
             // 
             // label20
             // 
@@ -313,6 +333,7 @@
             this.guestnameemail.Name = "guestnameemail";
             this.guestnameemail.Size = new System.Drawing.Size(254, 21);
             this.guestnameemail.TabIndex = 11;
+            this.guestnameemail.SelectedIndexChanged += new System.EventHandler(this.guestnameemail_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -332,6 +353,7 @@
             this.linkrefresh.TabIndex = 9;
             this.linkrefresh.TabStop = true;
             this.linkrefresh.Text = "Refresh";
+            this.linkrefresh.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkrefresh_LinkClicked);
             // 
             // linkadg
             // 
@@ -342,6 +364,7 @@
             this.linkadg.TabIndex = 8;
             this.linkadg.TabStop = true;
             this.linkadg.Text = "Add New Guest";
+            this.linkadg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkadg_LinkClicked);
             // 
             // guestid
             // 
@@ -389,6 +412,10 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.label27);
+            this.panel3.Controls.Add(this.label26);
+            this.panel3.Controls.Add(this.label25);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
@@ -399,6 +426,37 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(323, 369);
             this.panel3.TabIndex = 8;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(196, 301);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Check";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.Location = new System.Drawing.Point(48, 301);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Check";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(48, 333);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Check";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // roomfloor
             // 
@@ -536,32 +594,79 @@
             this.btn_submit.Text = "Submit";
             this.btn_submit.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // label25
             // 
-            this.button1.Location = new System.Drawing.Point(57, 335);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Check";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(3, 306);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(30, 13);
+            this.label25.TabIndex = 25;
+            this.label25.Text = "Note";
             // 
-            // button2
+            // label26
             // 
-            this.button2.Location = new System.Drawing.Point(57, 306);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Check";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(138, 306);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(50, 13);
+            this.label26.TabIndex = 26;
+            this.label26.Text = "Available";
             // 
-            // button3
+            // label27
             // 
-            this.button3.Location = new System.Drawing.Point(196, 306);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Check";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(138, 336);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(53, 13);
+            this.label27.TabIndex = 27;
+            this.label27.Text = "Occupied";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(30, 104);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 26;
+            this.button4.Text = "Room1";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(254, 214);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 26;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // no
+            // 
+            this.no.HeaderText = "No";
+            this.no.Name = "no";
+            // 
+            // idfasilitas
+            // 
+            this.idfasilitas.HeaderText = "Facility  ID";
+            this.idfasilitas.Name = "idfasilitas";
+            this.idfasilitas.Visible = false;
+            // 
+            // namafasilitas
+            // 
+            this.namafasilitas.HeaderText = "Additional Facility Name";
+            this.namafasilitas.Name = "namafasilitas";
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "Delete";
+            this.delete.Name = "delete";
+            this.delete.Text = "Delete";
+            this.delete.UseColumnTextForButtonValue = true;
             // 
             // Bookingroomform
             // 
@@ -592,7 +697,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -639,20 +744,30 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btn_submit;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker cidatetime;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox addfacility;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox qty;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dg;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.DataGridViewTextBoxColumn no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idfasilitas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namafasilitas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewButtonColumn delete;
     }
 }

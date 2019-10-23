@@ -108,7 +108,25 @@ namespace BungaHotel
 
         private void btn_load_Click(object sender, EventArgs e)
         {
-
+            dt.Clear();
+            dg.Refresh();
+            koneksi.select("select fbtk.IDFasilitas,tk.IDTipeKamar,NamaTipeKamar,k.NomorKamar,k.Lantai,f.NamaFasilitas from FasilitasBerdasarkanTipeKamar fbtk left join TipeKamar tk on fbtk.IDTipeKamar = tk.IDTipeKamar left join kamar k on tk.IDTipeKamar=k.IDTipeKamar left join Fasilitas f on fbtk.IDFasilitas=f.IDFasilitas where k.nomorkamar LIKE '" + search.Text + "' or f.namafasilitas LIKE '" + search.Text + "'");
+            koneksi.adp.Fill(dt);
+            dg.Rows.Clear();
+            foreach (DataRow dtr in dt.Rows)
+            {
+                string[] row = new string[] {
+                    i.ToString(),
+                    dtr[0].ToString(),
+                    dtr[1].ToString(),
+                    dtr[2].ToString(),
+                    dtr[3].ToString(),
+                    dtr[4].ToString(),
+                    dtr[5].ToString()
+                    };
+                dg.Rows.Add(row);
+                i++;
+            }
         }
 
         private void dg_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -136,6 +154,12 @@ namespace BungaHotel
                 }
                 
             }
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            i = 1;
+            segar();
         }
     }
 }

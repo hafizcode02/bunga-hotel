@@ -10,5 +10,6 @@ namespace BungaHotel
     {
         public string text { get; set; }
         public string value { get; set; }
+        public string price { get; set; }
     }
 }

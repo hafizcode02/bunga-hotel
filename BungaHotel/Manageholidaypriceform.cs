@@ -38,7 +38,7 @@ namespace BungaHotel
         {
             dt.Clear();
             dg.Refresh();
-            koneksi.select("select hf.IDHargaFluktuatif,tk.IDTipeKamar,tk.NamaTipeKamar,hk.HargaKamar,hf.Persentase, hk.HargaKamar - (hf.Persentase * hk.HargaKamar/100) as 'Final Price', hf.TglMulai,hf.TglSelesai from HargaFluktuatif hf left join TipeKamar tk on hf.IDTipeKamar=tk.IDTipeKamar left join HargaKamar hk on tk.IDTipeKamar=hk.IDTipeKamar");
+            koneksi.select("select hf.IDHargaFluktuatif,tk.IDTipeKamar,tk.NamaTipeKamar,hk.HargaKamar,hf.Persentase, hk.HargaKamar + (hf.Persentase * hk.HargaKamar/100) as 'Final Price', hf.TglMulai,hf.TglSelesai from HargaFluktuatif hf left join TipeKamar tk on hf.IDTipeKamar=tk.IDTipeKamar left join HargaKamar hk on tk.IDTipeKamar=hk.IDTipeKamar");
             koneksi.adp.Fill(dt);
             dg.Rows.Clear();
 
@@ -156,7 +156,7 @@ namespace BungaHotel
         {
             dt.Clear();
             dg.Refresh();
-            koneksi.select("select hf.IDHargaFluktuatif,tk.IDTipeKamar,tk.NamaTipeKamar,hf.Persentase,hk.HargaKamar, hk.HargaKamar - (hf.Persentase * hk.HargaKamar/100) as 'Final Price', hf.TglMulai,hf.TglSelesai from HargaFluktuatif hf left join TipeKamar tk on hf.IDTipeKamar=tk.IDTipeKamar left join HargaKamar hk on tk.IDTipeKamar=hk.IDTipeKamar left join kamar k on tk.idtipekamar=k.idtipekamar where k.idkamar LIKE '%" + search.Text + "%' or k.lantai LIKE '%" + search.Text + "%' or k.nomorkamar LIKE '%" + search.Text + "%' or tk.namatipekamar LIKE '%" + search.Text + "%'");
+            koneksi.select("select hf.IDHargaFluktuatif,tk.IDTipeKamar,tk.NamaTipeKamar,hf.Persentase,hk.HargaKamar, hk.HargaKamar + (hf.Persentase * hk.HargaKamar/100) as 'Final Price', hf.TglMulai,hf.TglSelesai from HargaFluktuatif hf left join TipeKamar tk on hf.IDTipeKamar=tk.IDTipeKamar left join HargaKamar hk on tk.IDTipeKamar=hk.IDTipeKamar left join kamar k on tk.idtipekamar=k.idtipekamar where k.idkamar LIKE '%" + search.Text + "%' or k.lantai LIKE '%" + search.Text + "%' or k.nomorkamar LIKE '%" + search.Text + "%' or tk.namatipekamar LIKE '%" + search.Text + "%'");
             koneksi.adp.Fill(dt);
             dg.Rows.Clear();
 

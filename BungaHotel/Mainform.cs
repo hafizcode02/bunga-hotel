@@ -106,7 +106,7 @@ namespace BungaHotel
 
         private void bookingRoomToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Bookingroomform bk = new Bookingroomform();
+            Bookingroomform bk = new Bookingroomform(idkaryawan);
             bk.ShowDialog();
         }
 
