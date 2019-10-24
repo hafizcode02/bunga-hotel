@@ -63,6 +63,7 @@
             this.bookingid.Name = "bookingid";
             this.bookingid.Size = new System.Drawing.Size(200, 21);
             this.bookingid.TabIndex = 9;
+            this.bookingid.SelectedIndexChanged += new System.EventHandler(this.bookingid_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -113,6 +114,7 @@
             this.payment.Name = "payment";
             this.payment.Size = new System.Drawing.Size(119, 20);
             this.payment.TabIndex = 21;
+            this.payment.TextChanged += new System.EventHandler(this.payment_TextChanged);
             // 
             // label4
             // 

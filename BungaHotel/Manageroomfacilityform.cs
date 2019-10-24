@@ -161,5 +161,10 @@ namespace BungaHotel
             i = 1;
             segar();
         }
+
+        private void Manageroomfacilityform_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

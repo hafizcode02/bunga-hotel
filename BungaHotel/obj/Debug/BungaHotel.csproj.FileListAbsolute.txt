@@ -24,3 +24,15 @@ C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHot
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageguestform.resources
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Roomavailabilityreport.resources
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Transactionreport.resources
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll

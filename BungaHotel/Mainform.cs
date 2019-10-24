@@ -118,7 +118,7 @@ namespace BungaHotel
 
         private void inputPaymentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Inputpaymentform ip = new Inputpaymentform();
+            Inputpaymentform ip = new Inputpaymentform(idkaryawan);
             ip.ShowDialog();
         }
 

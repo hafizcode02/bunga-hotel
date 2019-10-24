@@ -245,6 +245,7 @@
             this.Name = "Manageroomfacilityform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Semerbak Bunga Hotel : Manage Room Facility Form";
+            this.Load += new System.EventHandler(this.Manageroomfacilityform_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();

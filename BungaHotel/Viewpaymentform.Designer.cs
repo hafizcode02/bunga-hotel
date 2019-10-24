@@ -40,7 +40,6 @@
             this.roomno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeename = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remaindebt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +55,6 @@
             this.roomno,
             this.employeename,
             this.payment,
-            this.remaindebt,
             this.status});
             this.dg.Location = new System.Drawing.Point(14, 70);
             this.dg.Name = "dg";
@@ -72,6 +70,7 @@
             this.btn_load.TabIndex = 12;
             this.btn_load.Text = "Load Data";
             this.btn_load.UseVisualStyleBackColor = true;
+            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
             // 
             // label3
             // 
@@ -135,11 +134,6 @@
             this.payment.HeaderText = "Payment";
             this.payment.Name = "payment";
             // 
-            // remaindebt
-            // 
-            this.remaindebt.HeaderText = "Remain Debt";
-            this.remaindebt.Name = "remaindebt";
-            // 
             // status
             // 
             this.status.HeaderText = "Status";
@@ -178,7 +172,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn roomno;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeename;
         private System.Windows.Forms.DataGridViewTextBoxColumn payment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn remaindebt;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
     }
 }

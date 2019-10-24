@@ -15,7 +15,9 @@ namespace BungaHotel
         Koneksi koneksi = new Koneksi();
         DataTable dt = new DataTable();
         String idkaryawan;
+        string ihf,idpem;
         string idrt, idguest, idroompesan;
+        string hargakamar;
         int i = 1;
 
         public Bookingroomform(String idkaryawan)
@@ -46,8 +48,13 @@ namespace BungaHotel
             roomprice.Enabled = false;
             alltotalprice.Enabled = false;
             tax.Enabled = false;
-            cbroomnumber.Enabled = false;
             roomnumber.Enabled = false;
+            longstay.Text = "";
+            addfacility.Text = "";
+            qty.Text = "";
+            dg.Rows.Clear();
+            flowLayoutPanel1.Controls.Clear();
+            roomfloor.Text = "";
         }
 
         private void viewfloor()
@@ -152,6 +159,8 @@ namespace BungaHotel
                     ((comboitem)addfacility.SelectedItem).value.ToString(),
                     ((comboitem)addfacility.SelectedItem).text.ToString(),
                     c.ToString(),
+                    qty.Text.ToString(),
+                    a.ToString()
                 };
             dg.Rows.Add(data);
             i++;
@@ -159,6 +168,11 @@ namespace BungaHotel
             int ts = Int32.Parse(facilitytotalprice.Text);
             int totalprice = ts + c;
             facilitytotalprice.Text = totalprice.ToString();
+
+            int ts1 = Int32.Parse(facilitytotalprice.Text);
+            int ttlpc = Int32.Parse(alltotalprice.Text);
+            int total2 = ts1 + ttlpc;
+            alltotalprice.Text = total2.ToString();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -168,16 +182,21 @@ namespace BungaHotel
 
         private void dg_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 4)
+            if (e.ColumnIndex == 6)
             {
                 DataGridViewRow row = this.dg.Rows[e.RowIndex];
                 int a = Convert.ToInt32(row.Cells[3].Value.ToString());
                 dg.Rows.Remove(dg.Rows[e.RowIndex]);
                 dg.Refresh();
                 i = 1;
+
                 int ts = Int32.Parse(facilitytotalprice.Text);
                 int totalprice = ts - a;
                 facilitytotalprice.Text = totalprice.ToString();
+
+                int allttlp = Int32.Parse(alltotalprice.Text);
+                int jml = allttlp - a;
+                alltotalprice.Text = jml.ToString();
             }
         }
 
@@ -191,7 +210,7 @@ namespace BungaHotel
             }
             else
             {
-                roomprice.Text = ((comboitem)cbroomnumber.SelectedItem).price;
+                roomprice.Text = hargakamar;
             }
 
             int a = Int32.Parse(roomprice.Text);
@@ -217,43 +236,171 @@ namespace BungaHotel
 
         private void roomfloor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ("" != roomfloor.Text)
+            flowLayoutPanel1.Controls.Clear();
+            koneksi.select("select max(kamar.idkamar) as idkamar, max(perbaikankamar.idperbaikankamar) as idperbaikan,max(kamar.nomorkamar) as nokamar,max(pemesanan.status) as status,max(HargaKamar.HargaKamar) as hargakamar from kamar left join perbaikankamar on kamar.idkamar=perbaikankamar.idkamar left join pemesanan on kamar.idkamar=pemesanan.idkamar left join HargaKamar on kamar.IDTipeKamar=HargaKamar.IDTipeKamar where lantai='" + roomfloor.SelectedItem + "' and kamar.idtipekamar='" + idrt + "' group by kamar.idkamar");
+            if (koneksi.dt.Rows.Count != 0)
             {
-                cbroomnumber.Enabled = true;
-                DataTable dt5 = new DataTable();
-                dt5.Clear();
-                cbroomnumber.Items.Clear();
-                koneksi.select("select k.IDKamar,k.NomorKamar,hk.HargaKamar from HargaKamar hk left join TipeKamar tk on hk.IDTipeKamar=tk.IDTipeKamar left join kamar k on tk.IDTipeKamar=k.IDTipeKamar where hk.IDTipeKamar='" + idrt + "' and k.Lantai= '" + roomfloor.SelectedItem + "'");
-                koneksi.adp.Fill(dt5);
-                foreach (DataRow dtr in dt5.Rows)
+                for (int i = 0; i < koneksi.dt.Rows.Count; i++)
                 {
-                    cbroomnumber.DisplayMember = "value";
-                    cbroomnumber.DisplayMember = "text";
-                    cbroomnumber.Items.Add(new comboitem() { value = dtr[0].ToString(), text = dtr[1].ToString(), price = dtr[2].ToString() });
+                    string nokamar = koneksi.dt.Rows[i]["nokamar"].ToString();
+                    string idkamar = koneksi.dt.Rows[i]["idkamar"].ToString();
+                    string status = koneksi.dt.Rows[i]["status"].ToString();
+                    string idperbaikan = koneksi.dt.Rows[i]["idperbaikan"].ToString();
+                    string harga = koneksi.dt.Rows[i]["hargakamar"].ToString();
+                    Button b = new Button();
+                    b.Name = "ID" + idkamar;
+                    b.Text = nokamar;
+                    b.Tag = harga;
+                    if (idperbaikan != "")
+                    {
+                        b.ForeColor = Color.Maroon;
+                        b.BackColor = Color.White;
+                    }
+                    else if (status.Equals("B") || status.Equals("I"))
+                    {
+                        b.BackColor = Color.Red;
+                        b.ForeColor = Color.White;
+                    }
+                    else if (status.Equals("C") || status.Equals(""))
+                    {
+                        b.BackColor = Color.Blue;
+                        b.ForeColor = Color.White;
+                    }
+
+                    b.Click += new System.EventHandler(roomclick);
+                    flowLayoutPanel1.Controls.Add(b);
                 }
+            }
+        }
+
+        void roomclick(object s, EventArgs e)
+        {
+            Button thisbtn = (Button)s;
+            if (thisbtn.BackColor == Color.White)
+            {
+                MessageBox.Show("Kamar " + thisbtn.Text + " Sedang Diperbaiki");
+
+            }
+            else if (thisbtn.BackColor == Color.Blue)
+            {
+                hargakamar = thisbtn.Tag.ToString();
+                roomprice.Text = thisbtn.Tag.ToString();
+                alltotalprice.Text = thisbtn.Tag.ToString();
+                roomnumber.Text = thisbtn.Text;
+                idroompesan = thisbtn.Name.Substring(2);
+
+
+                int a = Int32.Parse(roomprice.Text);
+                int b = Int32.Parse(facilitytotalprice.Text);
+                int c = a + b;
+
+                int ttlpricetax = c / 10;
+                tax.Text = ttlpricetax.ToString();
+
+                int d = Int32.Parse(tax.Text);
+                int total = c + d;
+                alltotalprice.Text = total.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Kamar " + thisbtn.Text + " Sedang Dipakai");
             }
         }
 
         private void cbroomnumber_SelectedIndexChanged(object sender, EventArgs e)
         {
-            roomnumber.Text = ((comboitem)cbroomnumber.SelectedItem).text;
-            roomprice.Text = ((comboitem)cbroomnumber.SelectedItem).price;
-
-            int a = Int32.Parse(roomprice.Text);
-            int b = Int32.Parse(facilitytotalprice.Text);
-            int c = a + b;
-
-            int ttlpricetax = c / 10;
-            tax.Text = ttlpricetax.ToString();
-
-            int d = Int32.Parse(tax.Text);
-            int total = c + d;
-            alltotalprice.Text = total.ToString();
         }
 
         private void btn_submit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if ("".Equals(bookingtype.Text) || "".Equals(guestid.Text) || "".Equals(guestnameemail.Text) || "".Equals(roomnumber.Text) || "".Equals(longstay.Text))
+                {
+                    MessageBox.Show("Please fill a form");
+                }
+                else
+                {
+                    string sts = "B";
+                    koneksi.cud("insert into pemesanan (idjenispemesanan,tglpemesanan,waktumasukhotel,idpenghuni,idkamar,hargapermalam,idhargafluktuatif,lamatinggal,status,idkaryawan,totalbayar) values('" + ((comboitem)bookingtype.SelectedItem).value
+                            + "','" + cidatetime.Text
+                            + "','" + cidatetime.Text
+                            + "','" + guestid.Text
+                            + "','" + idroompesan
+                            + "','" + roomprice.Text
+                            + "'," + ihf
+                            + ",'" + longstay.Text
+                            + "','" + sts
+                            + "','" + idkaryawan
+                            + "','" + alltotalprice.Text + "')");
 
+                    
+                    DataTable cekidp = new DataTable();
+                    koneksi.select("select top 1 * from Pemesanan order by idpemesanan desc");
+                    koneksi.adp.Fill(cekidp);
+                    foreach(DataRow dtr in cekidp.Rows)
+                    {
+                        idpem = dtr[0].ToString();
+                    }
+
+                    int dgr = dg.Rows.Count;
+
+                    if (dgr > 0)
+                    {
+                        for (int i = 0; i < dg.Rows.Count; i++)
+                        {
+                            koneksi.cud("insert into pemesanandetail (idpemesanan,idfasilitastambahan,jumlahfasilitastambahan,hargasatuan) values('" + idpem
+                                + "','" + dg.Rows[i].Cells["idfasilitas"].Value.ToString()
+                                + "','" + dg.Rows[i].Cells["totalitem"].Value.ToString()
+                                + "','" + dg.Rows[i].Cells["priceasli"].Value.ToString() + "')");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MessageBox.Show("booking success");
+                segar();
+            }
+        }
+
+        private void cidatetime_ValueChanged(object sender, EventArgs e)
+        {
+            DataTable cek = new DataTable();
+            koneksi.select("select hf.idhargafluktuatif,hk.hargakamar + (hf.persentase * hk.hargakamar/100) as 'final price' from hargafluktuatif hf left join tipekamar tk on hf.idtipekamar=tk.idtipekamar left join hargakamar hk on tk.idtipekamar=hk.idtipekamar where tglmulai <='" + cidatetime.Value.ToString("yyyy/MM/dd") + "' and tglselesai >='" + cidatetime.Value.ToString("yyyy/MM/dd") + "' and hf.idtipekamar='" + idrt + "'");
+            koneksi.adp.Fill(cek);
+            if (cek.Rows.Count != 0)
+            {
+                String aa = "0";
+                foreach (DataRow dtr in cek.Rows)
+                {
+                    aa = dtr[1].ToString();
+                    ihf = dtr[0].ToString();
+                }
+
+                roomprice.Text = aa.ToString();
+
+                int a = Int32.Parse(roomprice.Text);
+                int b = Int32.Parse(facilitytotalprice.Text);
+                int c = a + b;
+
+                int ttlpricetax = c / 10;
+                tax.Text = ttlpricetax.ToString();
+
+                int d = Int32.Parse(tax.Text);
+                int total = c + d;
+                alltotalprice.Text = total.ToString();
+
+            }
+            else
+            {
+                roomprice.Text = hargakamar;
+                ihf = "NULL";
+            }
         }
 
         private void roomnumber_TextChanged(object sender, EventArgs e)

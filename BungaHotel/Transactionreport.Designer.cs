@@ -36,6 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // dateTimePicker2
@@ -106,12 +107,21 @@
             this.button1.TabIndex = 24;
             this.button1.Text = "Load";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(371, 40);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(454, 400);
+            this.reportViewer1.TabIndex = 25;
             // 
             // Transactionreport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 484);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label5);
@@ -123,6 +133,7 @@
             this.Name = "Transactionreport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Semerbak Bunga Hotel : Transaction Report";
+            this.Load += new System.EventHandler(this.Transactionreport_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +149,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

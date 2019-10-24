@@ -16,5 +16,16 @@ namespace BungaHotel
         {
             InitializeComponent();
         }
+
+        private void Transactionreport_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

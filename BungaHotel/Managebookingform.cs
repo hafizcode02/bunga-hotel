@@ -83,7 +83,7 @@ namespace BungaHotel
                     if (row.Cells[0].Value.ToString() != "" || row.Cells[0].Value.ToString() != null)
                     {
                         String bi = row.Cells[0].Value.ToString();
-                        String status = "Cancel";
+                        String status = "C";
                         if (e.ColumnIndex == 7)
                         {
                             DialogResult result = MessageBox.Show("Are You Sure to cancel this booking ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -93,7 +93,6 @@ namespace BungaHotel
                                 MessageBox.Show("Booking Canceled Succeess");
                             }
                         }
-                        MessageBox.Show("null");
                     }
                 }
                 catch (Exception ex)
