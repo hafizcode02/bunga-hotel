@@ -58,9 +58,7 @@ namespace BungaHotel
         {
             dt.Clear();
             dg.Refresh();
-
-            //search belum fix
-            koneksi.select("select Pembayaran.IDPembayaran,Pembayaran.TglPembayaran,Pemesanan.IDPemesanan,Penghuni.NamaPenghuni,kamar.NomorKamar,Karyawan.NamaKaryawan,Pembayaran.TotalPembayaran,Pemesanan.Status from pembayaran left join Pemesanan on Pembayaran.IDPemesanan=Pemesanan.IDPemesanan left join Karyawan on Pemesanan.IDKaryawan=Karyawan.IDKaryawan left join Penghuni on Pemesanan.IDPenghuni=Penghuni.IDPenghuni left join kamar on Pemesanan.IDKamar = kamar.IDKamar where pembayaran.tglpembayaran LIKE '" + search.Text + "' or pembayaran.idpembayaran LIKE '" + search.Text + "' or pemesanan.idpemesanan LIKE '" + search.Text + "' or penghuni.namapenghuni LIKE '" + search.Text + "' or kamar.nomorkamar LIKE '" + search.Text + "' or karyawan.namakaryawan LIKE '" + search.Text + "'");
+            koneksi.select("select Pembayaran.IDPembayaran,Pembayaran.TglPembayaran,Pemesanan.IDPemesanan,Penghuni.NamaPenghuni,kamar.NomorKamar,Karyawan.NamaKaryawan,Pembayaran.TotalPembayaran,Pemesanan.Status from pembayaran left join Pemesanan on Pembayaran.IDPemesanan=Pemesanan.IDPemesanan left join Karyawan on Pemesanan.IDKaryawan=Karyawan.IDKaryawan left join Penghuni on Pemesanan.IDPenghuni=Penghuni.IDPenghuni left join kamar on Pemesanan.IDKamar = kamar.IDKamar where pembayaran.tglpembayaran LIKE '%" + search.Text + "%' or pembayaran.idpembayaran LIKE '%" + search.Text + "%' or pemesanan.idpemesanan LIKE '%" + search.Text + "%' or penghuni.namapenghuni LIKE '%" + search.Text + "%' or kamar.nomorkamar LIKE '%" + search.Text + "%' or karyawan.namakaryawan LIKE '%" + search.Text + "%'");
             koneksi.adp.Fill(dt);
             dg.Rows.Clear();
             foreach (DataRow dtr in dt.Rows)

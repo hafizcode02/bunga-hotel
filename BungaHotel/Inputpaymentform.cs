@@ -25,10 +25,9 @@ namespace BungaHotel
         private void segar()
         {
             bookingid.Text = "";
-            remainingpayment.Text = "";
+            remainingpayment.Text = "0";
             payment.Text = "0";
             balance.Text = "0";
-            payment.Text = "0";
             getidpemesan();
             remainingpayment.Enabled = false;
             balance.Enabled = false;
@@ -80,11 +79,15 @@ namespace BungaHotel
 
         private void payment_TextChanged(object sender, EventArgs e)
         {
-            int rp = Int32.Parse(remainingpayment.Text);
-            int p = Int32.Parse(payment.Text);
+            if("" != payment.Text)
+            {
+                int rp = Int32.Parse(remainingpayment.Text);
+                int p = Int32.Parse(payment.Text);
 
-            int ttl = p - rp;
-            balance.Text = ttl.ToString();
+                int ttl = p - rp;
+                balance.Text = ttl.ToString();
+            }
+            
         }
 
         private void bookingid_SelectedIndexChanged(object sender, EventArgs e)

@@ -15,7 +15,7 @@ namespace BungaHotel
         Koneksi koneksi = new Koneksi();
         DataTable dt = new DataTable();
         String idkaryawan;
-        string ihf,idpem;
+        string ihf, idpem;
         string idrt, idguest, idroompesan;
         string hargakamar;
         int i = 1;
@@ -237,7 +237,7 @@ namespace BungaHotel
         private void roomfloor_SelectedIndexChanged(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            koneksi.select("select max(kamar.idkamar) as idkamar, max(perbaikankamar.idperbaikankamar) as idperbaikan,max(kamar.nomorkamar) as nokamar,max(pemesanan.status) as status,max(HargaKamar.HargaKamar) as hargakamar from kamar left join perbaikankamar on kamar.idkamar=perbaikankamar.idkamar left join pemesanan on kamar.idkamar=pemesanan.idkamar left join HargaKamar on kamar.IDTipeKamar=HargaKamar.IDTipeKamar where lantai='" + roomfloor.SelectedItem + "' and kamar.idtipekamar='" + idrt + "' group by kamar.idkamar");
+            koneksi.select("select max(kamar.idkamar) as idkamar, max(perbaikankamar.idperbaikankamar) as idperbaikan,max(kamar.nomorkamar) as nokamar,max(pemesanan.status) as status,max(HargaKamar.HargaKamar) as hargakamar from kamar left join perbaikankamar on (kamar.idkamar=perbaikankamar.idkamar and ('" + cidate.Value.ToString("yyyy-MM-dd") + "' between TglMulai and TglSelesai)) left join pemesanan on (kamar.idkamar=pemesanan.idkamar and ('" + cidate.Value.ToString("yyyy-MM-dd") + "' between WaktuMasukHotel and DATEADD(day,LamaTinggal,WaktuMasukHotel))) left join HargaKamar on kamar.IDTipeKamar=HargaKamar.IDTipeKamar where lantai = '" + idrt + "' and kamar.idtipekamar= '" + roomfloor.SelectedItem + "' group by kamar.idkamar");
             if (koneksi.dt.Rows.Count != 0)
             {
                 for (int i = 0; i < koneksi.dt.Rows.Count; i++)
@@ -321,9 +321,10 @@ namespace BungaHotel
                 }
                 else
                 {
+                    String dtime = DateTime.Now.ToString("yyyy-MM-dd");
                     string sts = "B";
                     koneksi.cud("insert into pemesanan (idjenispemesanan,tglpemesanan,waktumasukhotel,idpenghuni,idkamar,hargapermalam,idhargafluktuatif,lamatinggal,status,idkaryawan,totalbayar) values('" + ((comboitem)bookingtype.SelectedItem).value
-                            + "','" + cidatetime.Text
+                            + "','" + dtime
                             + "','" + cidatetime.Text
                             + "','" + guestid.Text
                             + "','" + idroompesan
@@ -334,11 +335,11 @@ namespace BungaHotel
                             + "','" + idkaryawan
                             + "','" + alltotalprice.Text + "')");
 
-                    
+
                     DataTable cekidp = new DataTable();
                     koneksi.select("select top 1 * from Pemesanan order by idpemesanan desc");
                     koneksi.adp.Fill(cekidp);
-                    foreach(DataRow dtr in cekidp.Rows)
+                    foreach (DataRow dtr in cekidp.Rows)
                     {
                         idpem = dtr[0].ToString();
                     }
