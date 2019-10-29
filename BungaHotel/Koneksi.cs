@@ -18,6 +18,7 @@ namespace BungaHotel
         public SqlDataAdapter adp = new SqlDataAdapter();
         public SqlDataReader dr;
         public DataTable dt = new DataTable();
+        public DataSet ds;
         
         public void select(string query)
         {
@@ -48,6 +49,23 @@ namespace BungaHotel
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                koneksi.Close();
+            }
+        }
+
+        public void chart(string query)
+        {
+            try
+            {
+                koneksi.Open();
+                cmd = new SqlCommand(query, koneksi);
+                dr = cmd.ExecuteReader();
+            }catch(Exception ex)
+            {
+
             }
             finally
             {

@@ -16,13 +16,14 @@ namespace BungaHotel
         DataTable dt = new DataTable();
         String idkaryawan;
         string ihf, idpem;
-        string idrt, idguest, idroompesan;
-        string hargakamar;
+        string idrt, idguest, idroompesan,hargainsert;
+        string hargakamar = "0";
         int i = 1;
 
         public Bookingroomform(String idkaryawan)
         {
             InitializeComponent();
+            facilitytotalprice.Text = "0";
             segar();
             this.idkaryawan = idkaryawan;
             timer1.Start();
@@ -284,6 +285,7 @@ namespace BungaHotel
             else if (thisbtn.BackColor == Color.Blue)
             {
                 hargakamar = thisbtn.Tag.ToString();
+                hargainsert = hargakamar;
                 roomprice.Text = thisbtn.Tag.ToString();
                 alltotalprice.Text = thisbtn.Tag.ToString();
                 roomnumber.Text = thisbtn.Text;
@@ -328,7 +330,7 @@ namespace BungaHotel
                             + "','" + cidatetime.Text
                             + "','" + guestid.Text
                             + "','" + idroompesan
-                            + "','" + roomprice.Text
+                            + "','" + hargainsert
                             + "'," + ihf
                             + ",'" + longstay.Text
                             + "','" + sts
@@ -360,7 +362,7 @@ namespace BungaHotel
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+
             }
             finally
             {
@@ -384,6 +386,7 @@ namespace BungaHotel
                 }
 
                 roomprice.Text = aa.ToString();
+                hargainsert = aa.ToString();
 
                 int a = Int32.Parse(roomprice.Text);
                 int b = Int32.Parse(facilitytotalprice.Text);
@@ -400,6 +403,17 @@ namespace BungaHotel
             else
             {
                 roomprice.Text = hargakamar;
+                hargainsert = hargakamar;
+                int a = Int32.Parse(roomprice.Text);
+                int b = Int32.Parse(facilitytotalprice.Text);
+                int c = a + b;
+
+                int ttlpricetax = c / 10;
+                tax.Text = ttlpricetax.ToString();
+
+                int d = Int32.Parse(tax.Text);
+                int total = c + d;
+                alltotalprice.Text = total.ToString();
                 ihf = "NULL";
             }
         }
