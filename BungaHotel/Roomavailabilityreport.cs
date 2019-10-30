@@ -94,11 +94,6 @@ namespace BungaHotel
 
         private void btn_load_Click(object sender, EventArgs e)
         {
-            //chart1.Series.Add("Deluxe");
-            //chart1.Series["Deluxe"].Points.AddXY("Testing", "100000");
-            //chart1.Series["Deluxe"].Points.AddXY("anjay", "63000");
-            //chart1.Titles.Add("Ini Testing");
-
             int idmonth = Convert.ToInt32(((comboitem)month.SelectedItem).value);
             int idduration = Convert.ToInt32(((comboitem)duration.SelectedItem).value);
             if (txtbox == "Deluxe")
@@ -107,16 +102,16 @@ namespace BungaHotel
                 for (int i = idmonth; i <= idmonth + idduration; i++)
                 {
                     String[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
-                    koneksi.chart("select count(*) from kamar where not exists(select idkamar from Pemesanan where kamar.IDKamar=Pemesanan.IDKamar and MONTH(TglPemesanan)='" + i + "') and kamar.IDTipeKamar='" + idbox + "'");
+                    koneksi.chart("select count(*) hitung from kamar where not exists(select idkamar from Pemesanan where kamar.IDKamar=Pemesanan.IDKamar and MONTH(TglPemesanan)='" + i + "') and kamar.IDTipeKamar='" + idbox + "'");
                     chart1.DataSource = koneksi.ds;
                     for(int j = idmonth-1; i<= idmonth +idduration; i++)
                     {
-                        chart1.Series["Deluxe"].Points.AddXY("");
+                        chart1.Series["Deluxe"].Points.AddXY(months[j].ToString(), "hitung");
                     }
-                    if (i > 12)
-                    {
-                        break;
-                    }
+                    //if (i > 12)
+                    //{
+                    //    break;
+                    //}
                 }
             }
             else if (txtbox == "Superior")

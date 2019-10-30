@@ -15,7 +15,6 @@ C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHot
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Viewpaymentform.resources
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageroomtypeform.resources
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageroomform.resources
-C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.csprojResolveAssemblyReference.cache
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageroomfacilityform.resources
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Manageroomrepairmentform.resources
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.Managedailypriceform.resources
@@ -36,3 +35,11 @@ C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHot
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\EntityFramework.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\EntityFramework.xml
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.TestChart.resources
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\RdlCompile.cache
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\RdlCompile.compiled
+C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.csprojResolveAssemblyReference.cache

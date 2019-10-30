@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bungahotelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Pembayaran">
+    <Key>
+      <PropertyRef Name="IDPembayaran" />
+    </Key>
+    <Property Name="IDPembayaran" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TglPembayaran" Type="DateTime" Precision="0" />
+    <Property Name="IDPemesanan" Type="Int32" />
+    <Property Name="IDKaryawan" Type="Int32" />
+    <Property Name="TotalPembayaran" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="bungahotelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Pembayarans" EntityType="Self.Pembayaran" />
+  </EntityContainer>
+</Schema>

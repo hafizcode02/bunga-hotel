@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bungahotelModelStoreContainer" CdmEntityContainer="bungahotelEntities">
+    <EntitySetMapping Name="Pembayarans">
+      <EntityTypeMapping TypeName="bungahotelModel.Pembayaran">
+        <MappingFragment StoreEntitySet="Pembayaran">
+          <ScalarProperty Name="IDPembayaran" ColumnName="IDPembayaran" />
+          <ScalarProperty Name="TglPembayaran" ColumnName="TglPembayaran" />
+          <ScalarProperty Name="IDPemesanan" ColumnName="IDPemesanan" />
+          <ScalarProperty Name="IDKaryawan" ColumnName="IDKaryawan" />
+          <ScalarProperty Name="TotalPembayaran" ColumnName="TotalPembayaran" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
