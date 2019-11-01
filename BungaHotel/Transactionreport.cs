@@ -80,6 +80,7 @@ namespace BungaHotel
                     "INNER JOIN kamar ON kamar.IDKamar = Pemesanan.IDKamar where (pembayaran.tglpembayaran between '" + begindate.Value.ToString("yyyy-MM-dd") + "' and '" + enddate.Value.ToString("yyyy-MM-dd") + "')" + tipe);
                 this.Report.Clear();
                 koneksi.adp.Fill(this.Report.Testing);
+
                 ReportParameterCollection rp = new ReportParameterCollection();
                 rp.Add(new ReportParameter("satu", cbrt.Text));
                 this.reportViewer1.LocalReport.SetParameters(rp);

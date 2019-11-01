@@ -40,6 +40,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_add = new System.Windows.Forms.Button();
             this.dg = new System.Windows.Forms.DataGridView();
+            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idfasilitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namafasilitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalitem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceasli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.qty = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.addfacility = new System.Windows.Forms.ComboBox();
@@ -87,13 +94,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.btn_submit = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idfasilitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namafasilitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalitem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceasli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label28 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
@@ -237,6 +238,46 @@
             this.dg.TabIndex = 24;
             this.dg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellClick);
             this.dg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // no
+            // 
+            this.no.HeaderText = "No";
+            this.no.Name = "no";
+            // 
+            // idfasilitas
+            // 
+            this.idfasilitas.HeaderText = "Facility  ID";
+            this.idfasilitas.Name = "idfasilitas";
+            this.idfasilitas.Visible = false;
+            // 
+            // namafasilitas
+            // 
+            this.namafasilitas.HeaderText = "Additional Facility Name";
+            this.namafasilitas.Name = "namafasilitas";
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            // 
+            // totalitem
+            // 
+            this.totalitem.HeaderText = "totalitem";
+            this.totalitem.Name = "totalitem";
+            this.totalitem.Visible = false;
+            // 
+            // priceasli
+            // 
+            this.priceasli.HeaderText = "Price Asli";
+            this.priceasli.Name = "priceasli";
+            this.priceasli.Visible = false;
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "Delete";
+            this.delete.Name = "delete";
+            this.delete.Text = "Delete";
+            this.delete.UseColumnTextForButtonValue = true;
             // 
             // qty
             // 
@@ -431,6 +472,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label28);
             this.panel3.Controls.Add(this.flowLayoutPanel1);
             this.panel3.Controls.Add(this.label27);
             this.panel3.Controls.Add(this.label26);
@@ -458,7 +500,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(138, 336);
+            this.label27.Location = new System.Drawing.Point(126, 338);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(53, 13);
             this.label27.TabIndex = 27;
@@ -467,7 +509,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(138, 306);
+            this.label26.Location = new System.Drawing.Point(127, 306);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(50, 13);
             this.label26.TabIndex = 26;
@@ -476,7 +518,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(3, 306);
+            this.label25.Location = new System.Drawing.Point(11, 306);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(30, 13);
             this.label25.TabIndex = 25;
@@ -485,7 +527,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(196, 301);
+            this.button3.Location = new System.Drawing.Point(183, 300);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 12;
@@ -655,45 +697,14 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // no
+            // label28
             // 
-            this.no.HeaderText = "No";
-            this.no.Name = "no";
-            // 
-            // idfasilitas
-            // 
-            this.idfasilitas.HeaderText = "Facility  ID";
-            this.idfasilitas.Name = "idfasilitas";
-            this.idfasilitas.Visible = false;
-            // 
-            // namafasilitas
-            // 
-            this.namafasilitas.HeaderText = "Additional Facility Name";
-            this.namafasilitas.Name = "namafasilitas";
-            // 
-            // price
-            // 
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
-            // 
-            // totalitem
-            // 
-            this.totalitem.HeaderText = "totalitem";
-            this.totalitem.Name = "totalitem";
-            this.totalitem.Visible = false;
-            // 
-            // priceasli
-            // 
-            this.priceasli.HeaderText = "Price Asli";
-            this.priceasli.Name = "priceasli";
-            this.priceasli.Visible = false;
-            // 
-            // delete
-            // 
-            this.delete.HeaderText = "Delete";
-            this.delete.Name = "delete";
-            this.delete.Text = "Delete";
-            this.delete.UseColumnTextForButtonValue = true;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(264, 305);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(50, 13);
+            this.label28.TabIndex = 31;
+            this.label28.Text = "In Repair";
             // 
             // Bookingroomform
             // 
@@ -799,5 +810,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalitem;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceasli;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
+        private System.Windows.Forms.Label label28;
     }
 }

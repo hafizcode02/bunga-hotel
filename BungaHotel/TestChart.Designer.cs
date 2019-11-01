@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.Report = new BungaHotel.Report();
             this.TestingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Report = new BungaHotel.Report();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.TestingTableAdapter = new BungaHotel.ReportTableAdapters.TestingTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.Report)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TestingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Report)).BeginInit();
             this.SuspendLayout();
+            // 
+            // TestingBindingSource
+            // 
+            this.TestingBindingSource.DataMember = "Testing";
+            this.TestingBindingSource.DataSource = this.Report;
+            // 
+            // Report
+            // 
+            this.Report.DataSetName = "Report";
+            this.Report.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -48,16 +58,7 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(766, 390);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // Report
-            // 
-            this.Report.DataSetName = "Report";
-            this.Report.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // TestingBindingSource
-            // 
-            this.TestingBindingSource.DataMember = "Testing";
-            this.TestingBindingSource.DataSource = this.Report;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // TestingTableAdapter
             // 
@@ -72,8 +73,8 @@
             this.Name = "TestChart";
             this.Text = "TestChart";
             this.Load += new System.EventHandler(this.TestChart_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Report)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TestingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Report)).EndInit();
             this.ResumeLayout(false);
 
         }
