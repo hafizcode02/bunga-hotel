@@ -43,3 +43,6 @@ C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHot
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\RdlCompile.cache
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\RdlCompile.compiled
 C:\Users\Hafiz Caniago\Documents\Visual Studio 2015\Projects\BungaHotel\BungaHotel\obj\Debug\BungaHotel.csprojResolveAssemblyReference.cache
+C:\Users\Hafiz Caniago\OneDrive\Documents\Visual Studio 2015\Projects\bungahotel\BungaHotel\bin\Debug\BungaHotel.exe.config
+C:\Users\Hafiz Caniago\OneDrive\Documents\Visual Studio 2015\Projects\bungahotel\BungaHotel\obj\Debug\BungaHotel.exe
+C:\Users\Hafiz Caniago\OneDrive\Documents\Visual Studio 2015\Projects\bungahotel\BungaHotel\obj\Debug\BungaHotel.pdb
