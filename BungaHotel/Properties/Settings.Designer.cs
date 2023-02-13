@@ -32,5 +32,15 @@ namespace BungaHotel.Properties {
                 return ((string)(this["bungahotelCon"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-UUUQOK8;Initial Catalog=bungahotel;Integrated Security=True")]
+        public string bungahotelConnectionString {
+            get {
+                return ((string)(this["bungahotelConnectionString"]));
+            }
+        }
     }
 }

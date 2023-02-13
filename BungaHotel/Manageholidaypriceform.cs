@@ -77,24 +77,27 @@ namespace BungaHotel
         {
             try
             {
-                if("".Equals(cbrt.Text)||"".Equals(percentage.Text))
+                if ("".Equals(cbrt.Text) || "".Equals(percentage.Text))
                 {
                     MessageBox.Show("please fill all columns");
-                }else
+                }
+                else
                 {
-                    if(newdata)
+                    if (newdata)
                     {
                         koneksi.cud("insert into hargafluktuatif (idtipekamar,persentase,tglmulai,tglselesai) values('" + ((comboitem)cbrt.SelectedItem).value
                             + "','" + percentage.Text
                             + "','" + begin.Text
                             + "','" + end.Text + "')");
                         MessageBox.Show("Data insert success");
-                    }else
+                    }
+                    else
                     {
-                        if(cbrt.SelectedIndex < 0)
+                        if (cbrt.SelectedIndex < 0)
                         {
 
-                        }else
+                        }
+                        else
                         {
                             idrt = ((comboitem)cbrt.SelectedItem).value;
                         }
@@ -105,7 +108,8 @@ namespace BungaHotel
                         MessageBox.Show("Data updated success");
                     }
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -117,7 +121,7 @@ namespace BungaHotel
 
         private void dg_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dg.Rows[e.RowIndex];
                 idhf = row.Cells[0].Value.ToString();
@@ -130,18 +134,18 @@ namespace BungaHotel
                 newdata = false;
                 btn_submit.Text = "Edit";
             }
-            if(e.ColumnIndex == 8)
+            if (e.ColumnIndex == 8)
             {
                 try
                 {
                     DialogResult result = MessageBox.Show("Are You sure to delete this data ?", "warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if(DialogResult.Yes == result)
+                    if (DialogResult.Yes == result)
                     {
                         koneksi.cud("delete from hargafluktuatif where idhargafluktuatif='" + idhf + "'");
                         MessageBox.Show("data delete success");
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }

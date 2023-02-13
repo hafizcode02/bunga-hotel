@@ -127,5 +127,10 @@ namespace BungaHotel
             Viewpaymentform vp = new Viewpaymentform();
             vp.ShowDialog();
         }
+
+        private void Mainform_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

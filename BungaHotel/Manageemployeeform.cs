@@ -128,7 +128,7 @@ namespace BungaHotel
                     MessageBox.Show("Update Data Successfull");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -149,7 +149,7 @@ namespace BungaHotel
                     MessageBox.Show("Delete Data Successfull");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -157,7 +157,7 @@ namespace BungaHotel
             {
                 segar();
             }
-            
+
         }
 
         private void btn_refresh_Click(object sender, EventArgs e)
@@ -167,7 +167,7 @@ namespace BungaHotel
 
         private void dg_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dg.Rows[e.RowIndex];
                 employeeid.Text = row.Cells[0].Value.ToString();
@@ -175,10 +175,11 @@ namespace BungaHotel
                 email.Text = row.Cells[2].Value.ToString();
                 password.Text = row.Cells[3].Value.ToString();
                 dob.Text = row.Cells[4].Value.ToString();
-                if(row.Cells[5].Value.ToString() == "M")
+                if (row.Cells[5].Value.ToString() == "M")
                 {
                     male.Checked = true;
-                }else
+                }
+                else
                 {
                     female.Checked = true;
                 }

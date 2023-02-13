@@ -109,7 +109,7 @@
             this.inputPaymentToolStripMenuItem,
             this.viewPaymentToolStripMenuItem});
             this.transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
-            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.transactionToolStripMenuItem.Text = "Transaction";
             // 
             // bookingRoomToolStripMenuItem
@@ -259,6 +259,7 @@
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Semerbak Bunga Hotel : Main Form";
+            this.Load += new System.EventHandler(this.Mainform_Load);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.ResumeLayout(false);

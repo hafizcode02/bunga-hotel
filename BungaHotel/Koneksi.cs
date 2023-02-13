@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
-using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -12,7 +7,7 @@ namespace BungaHotel
 {
     class Koneksi
     {
-        public static string database = ("Data Source=DESKTOP-K1NGH4;Initial Catalog=bungahotel;Integrated Security=True");
+        public static string database = ("Data Source=DESKTOP-UUUQOK8;Initial Catalog=bungahotel;Integrated Security=True");
         public SqlConnection koneksi = new SqlConnection(database);
         public SqlCommand cmd;
         public SqlDataAdapter adp = new SqlDataAdapter();

@@ -29,19 +29,21 @@ namespace BungaHotel
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            if("".Equals(email.Text) || "".Equals(password.Text))
+            if ("".Equals(email.Text) || "".Equals(password.Text))
             {
                 MessageBox.Show("Please Fill All Column");
-            }else
+            }
+            else
             {
                 koneksi.select("select * from karyawan where email='" + email.Text + "' and password='" + password.Text + "'");
                 koneksi.adp.Fill(dt);
-                if(koneksi.dt.Rows.Count <= 0)
+                if (koneksi.dt.Rows.Count <= 0)
                 {
                     MessageBox.Show("Wrong Account");
-                }else
+                }
+                else
                 {
-                    foreach(DataRow dtr in dt.Rows)
+                    foreach (DataRow dtr in dt.Rows)
                     {
                         idkaryawan = dtr[0].ToString();
                     }
